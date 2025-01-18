@@ -1,9 +1,9 @@
 const App = () => {
   return <>
-  <section>
+  <h1>
     Hello World
-  </section>
+  </h1>
   </>
-}
+} // first letter of the function should be capitalise and should always return a HTML container
 
-export default App;
+export default App; // so that this created component can be used in any other files
