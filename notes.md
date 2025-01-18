@@ -50,4 +50,7 @@
  - public -> contains all the assets like HTML etc. that is to be used in the project
  - src -> all the React code is here and and reqd assets like images and other things
  - .gitignore file -> used to ignore some folders or files that is not reqd pushed to the github
- 
+ - eslint.config.js -> eslint configuration file
+ - index.html -> contains the root element through which the React is rendered on the web browser
+ - package.json -> contains the meta data for the React project we are on, and the modules dependencies
+ - vite.config.js -> vite configuration file
