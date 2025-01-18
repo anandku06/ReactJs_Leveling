@@ -54,3 +54,7 @@
  - index.html -> contains the root element through which the React is rendered on the web browser
  - package.json -> contains the meta data for the React project we are on, and the modules dependencies
  - vite.config.js -> vite configuration file
+
+ ## Components in React
+    - are independent & resuable bits of code. They serve the same purpose as JS functions, but work in isolation and return HTML.
+    - make components just like decalaring functions in JS but the first letter of the name of the function should be capitalise.
