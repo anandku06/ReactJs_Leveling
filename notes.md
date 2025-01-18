@@ -45,3 +45,9 @@
  - then follow the 'Now run cmds on your terminal'
  - and you are good to go!!
 
+ ## folder structure in React
+ - node_modules -> contains modules that React uses and any further modules reqd will be installed here
+ - public -> contains all the assets like HTML etc. that is to be used in the project
+ - src -> all the React code is here and and reqd assets like images and other things
+ - .gitignore file -> used to ignore some folders or files that is not reqd pushed to the github
+ 
