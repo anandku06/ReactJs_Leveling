@@ -36,9 +36,9 @@
             ```
 
  - Go to terminal and type:
-    ```bash
+```bash
     npm create vite@latest
-    ```
+```
  - type your project name and package name
  - select the framework(React)
  - Select the variant(JavaScript)
@@ -56,5 +56,13 @@
  - vite.config.js -> vite configuration file
 
  ## Components in React
-    - are independent & resuable bits of code. They serve the same purpose as JS functions, but work in isolation and return HTML.
-    - make components just like decalaring functions in JS but the first letter of the name of the function should be capitalise.
+- are independent & resuable bits of code. They serve the same purpose as JS functions, but work in isolation and return HTML.
+- make components just like decalaring functions in JS but the first letter of the name of the function should be capitalise.
+- after making the component, it is exported for other files usage and there, it is then imported
+    ```javascript
+        export default Component
+
+        import Component from './Component.jsx'
+    ```
+- after importing, it is then rendered by selecting the root id element from the HTML file
+- giving the component name as self-closing HTML tags
