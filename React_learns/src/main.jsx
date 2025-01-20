@@ -6,6 +6,5 @@ import Greet from "./components/Greet.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <App />
-    <Greet />
   </StrictMode>
 );
