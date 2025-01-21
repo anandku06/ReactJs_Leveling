@@ -1,15 +1,12 @@
 import Footer from "./Footer.jsx";
 import Header from "./Header.jsx";
 import MainComponent from "./MainContent.jsx";
+import WelcomeMessage from "./WelcomeMessage.jsx";
 
 const App = () => {
   return (
     <>
-      <Header />
-      <br />
-      <MainComponent />
-      <br />
-      <Footer />
+      <WelcomeMessage />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
