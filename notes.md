@@ -66,3 +66,18 @@
     ```
 - after importing, it is then rendered by selecting the root id element from the HTML file
 - giving the component name as self-closing HTML tags
+
+## JSX
+- JavaScript XML -> BTS we are working with JS
+- allows us to write HTML in React.
+- makes it easier to write & add HTML in React
+```jsx
+    const Component = () => {
+        return (
+            <section className="class"> // in JSX, HTML classes are defined using className attribute, for tailwind CSS as well
+                <h1>My Website</h1>
+            </section>
+        )
+    }
+```
+- make a JS function and returning HTML code through it
