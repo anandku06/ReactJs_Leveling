@@ -3,11 +3,12 @@ import Header from "./Header.jsx";
 import MainComponent from "./MainContent.jsx";
 import WelcomeMessage from "./WelcomeMessage.jsx";
 import JSXRules from './JSXRules.jsx'
+import Expressions from "./Expressions.jsx";
 
 const App = () => {
   return (
     <>
-      <JSXRules />
+      <Expressions />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container

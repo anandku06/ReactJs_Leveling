@@ -87,3 +87,7 @@
 - closing of the HTML tags are also important
 - to provide classes to the tags, we'll use className attrbute, not the class attribute as it'll considered as real class by the JS interpreter
     - same goes for the for attribute of the label tag, htmlFor attribute is used at its place
+    ### JSX Expressions
+    - With JSX, you can write expressions inside curly braces.
+    - The expressions can be a React variable, or property, or any other JS expression.
+    - JSX will execute te expression and return the result.
