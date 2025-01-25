@@ -6,13 +6,11 @@ import JSXRules from "./JSXRules.jsx";
 import Expressions from "./Expressions.jsx";
 import Greetings from "./Greetings.jsx";
 import ProductInfo from "./ProductInfo.jsx";
+import Mapping from "./Mapping.jsx";
 
 const App = () => {
   return (
-    <>
-      <Greetings />
-      <ProductInfo />
-    </>
+    <Mapping />
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
 

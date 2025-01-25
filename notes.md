@@ -91,3 +91,6 @@
     - With JSX, you can write expressions inside curly braces.
     - The expressions can be a React variable, or property, or any other JS expression.
     - JSX will execute te expression and return the result.
+
+## Lists in React
+- In React, you'll render lists with some type of loop. The JS map() array method is generally preferred.
