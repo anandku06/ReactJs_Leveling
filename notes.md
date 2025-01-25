@@ -77,7 +77,13 @@
             <section className="class"> // in JSX, HTML classes are defined using className attribute, for tailwind CSS as well
                 <h1>My Website</h1>
             </section>
+            // can't have two section element or div element
+            // only one element is to be returned
         )
     }
 ```
 - make a JS function and returning HTML code through it
+- returns only single parent element, whether a div or any block-type element
+- closing of the HTML tags are also important
+- to provide classes to the tags, we'll use className attrbute, not the class attribute as it'll considered as real class by the JS interpreter
+    - same goes for the for attribute of the label tag, htmlFor attribute is used at its place
