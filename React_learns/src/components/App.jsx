@@ -13,8 +13,8 @@ import ProductList from "./ProductList.jsx";
 const App = () => {
   return (
     <>
-    <UserList />
-    <ProductList />
+      <UserList />
+      <ProductList />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container

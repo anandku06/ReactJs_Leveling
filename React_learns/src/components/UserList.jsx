@@ -22,9 +22,10 @@ const UserList = () => {
     <div>
         <h1>Users</h1>
         {users.map(({name, age, id}) => (
-            <ul key={id}>
-                <li>Name: {name}, Age: {age}</li>
-            </ul>
+            <div key={id}>
+                <h3>Name: {name}</h3>
+                <h3>Age: {age}</h3>
+            </div>
         ))}
     </div>
   );

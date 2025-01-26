@@ -23,9 +23,10 @@ const ProductList = () => {
     <div>
         <h1>Products</h1>
         {products.map(({name, price, id}) => (
-            <ul key={id}>
-                <li>Name: {name}, Price: {price}</li>
-            </ul>
+            <div key={id}>
+                <h3>Name: {name}</h3>
+                <h3>Price: {price}</h3>
+            </div>
         ))}
     </div>
   )
