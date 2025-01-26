@@ -10,13 +10,14 @@ import Mapping from "./Mapping.jsx";
 import UserList from "./UserList.jsx";
 import ProductList from "./ProductList.jsx";
 import Props from "./Props.jsx";
+import Person from "./Person.jsx";
+import Product from "./Product.jsx";
 
 const App = () => {
   return (
     <>
-      <UserList />
-      <ProductList />
-      <Props />
+      <Person name="Anand" age={20} />
+      <Product name="Laptop" price="$1299" />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
