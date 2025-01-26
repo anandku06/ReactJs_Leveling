@@ -4,7 +4,12 @@ import MainComponent from "./MainContent";
 const Props = () => {
   return (
     <>
-      <MainComponent name="Anand" age={18} isMarried={false} hobbies={["Coding", "Reading", "Sleeping"]} />
+      <MainComponent
+        name="Anand"
+        age={18}
+        isMarried={false}
+        hobbies={["Coding", "Reading", "Sleeping"]}
+      />
     </>
   );
 };
