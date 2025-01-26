@@ -15,7 +15,7 @@ const Props = () => {
         <h1>Name: Anand</h1>
         <p>Age is 18 and not married.</p>
       </Greetings>
-      {/* This is also we can pass data to a child component and to access it we just use the '.children' with the props */}
+      {/* This is also how we can pass data to a child component (by closing the component and under that the data is passed)and to access it we just use the '.children' with the props */}
     </>
   );
 };
