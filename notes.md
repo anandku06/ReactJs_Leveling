@@ -94,3 +94,8 @@
 
 ## Lists in React
 - In React, you'll render lists with some type of loop. The JS map() array method is generally preferred.
+
+## Props in React
+- props/properties are arguments passed into React components
+- allows us to pass data from parent components to a child component
+- are passed to components via HTML attributes and are accessed as objects in the child components

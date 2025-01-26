@@ -1,7 +1,17 @@
-const MainComponent = () => {
+const MainComponent = ({name, age, isMarried, hobbies}) => {
   return (
     <div>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis officiis animi ullam, nesciunt, ducimus necessitatibus exercitationem perspiciatis sit dolore maiores velit soluta sunt neque error aperiam modi quisquam saepe hic! Libero dicta fugiat natus nesciunt optio provident debitis! Cumque provident voluptatem enim modi rerum? Itaque nostrum mollitia maiores numquam!
+      <h2>{name}</h2>
+      <h2>{age}</h2>
+      <h3>Hobbies</h3>
+      <ul>
+        <li>{hobbies[0]}</li>
+        <li>{hobbies[1]}</li>
+        <li>{hobbies[2]}</li>
+      </ul>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi vero similique maxime dolor at, ipsum minus repudiandae corrupti nesciunt magni illo labore voluptatibus quas quae pariatur ipsa officia voluptatum amet quod aperiam soluta sapiente impedit in magnam? In maiores, culpa repellendus perspiciatis cumque consectetur consequuntur temporibus asperiores, exercitationem itaque laboriosam.
+      </p>
     </div>
   )
 }

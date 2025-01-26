@@ -9,12 +9,14 @@ import ProductInfo from "./ProductInfo.jsx";
 import Mapping from "./Mapping.jsx";
 import UserList from "./UserList.jsx";
 import ProductList from "./ProductList.jsx";
+import Props from "./Props.jsx";
 
 const App = () => {
   return (
     <>
       <UserList />
       <ProductList />
+      <Props />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
