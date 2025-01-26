@@ -1,5 +1,6 @@
 import React from "react";
 import MainComponent from "./MainContent";
+import Greetings from './Greetings.jsx'
 
 const Props = () => {
   return (
@@ -10,6 +11,11 @@ const Props = () => {
         isMarried={false}
         hobbies={["Coding", "Reading", "Sleeping"]}
       />
+      <Greetings>
+        <h1>Name: Anand</h1>
+        <p>Age is 18 and not married.</p>
+      </Greetings>
+      {/* This is also we can pass data to a child component and to access it we just use the '.children' with the props */}
     </>
   );
 };

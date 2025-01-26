@@ -16,8 +16,9 @@ import Product from "./Product.jsx";
 const App = () => {
   return (
     <>
-      <Person name="Anand" age={20} />
-      <Product name="Laptop" price="$1299" />
+      {/* <Person name="Anand" age={20} /> */}
+      {/* <Product name="Laptop" price="$1299" /> */}
+      <Props />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
