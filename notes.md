@@ -99,3 +99,7 @@
 - props/properties are arguments passed into React components
 - allows us to pass data from parent components to a child component
 - are passed to components via HTML attributes and are accessed as objects in the child components
+
+## Conditional Rendering
+- allows us to dynamically display different UI components or content-based on specific conditions
+- This enables us to create more interactive and responsive user experiences
