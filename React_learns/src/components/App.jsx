@@ -16,6 +16,8 @@ import Product from "./Product.jsx";
 import Weather from './Weather.jsx'
 import UserStatus from './UserStatus.jsx'
 import StyleCard from "./StyleCard.jsx";
+import ProfileCard from "./ProfileCard.jsx";
+import IconComponent from "./IconComponent.jsx";
 
 const App = () => {
   return (
@@ -27,6 +29,8 @@ const App = () => {
       <UserStatus loggedIn={false} isAdmin={false}/>
       <Greeting timeOfDay={"morning"}/> */}
       <StyleCard />
+      <ProfileCard />
+      <IconComponent />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
