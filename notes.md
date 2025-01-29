@@ -113,3 +113,19 @@
 - a React library having different types of icons for use
     requires npm to install its package and can be used then
 - after installing, just search for the desired icons and import it and use its pre-defined component in your project
+
+## State
+- a way to store and manage data that can change over time and affects how the component renders.
+- define state using the *useState Hook*, which allows you to set an initial value and provides a way to update that state
+
+## Hooks
+- a new addition in React 16.8, let you use state and other React feats without writing a class.
+    - ### useState() :
+        allows us to track state in a functional component. State generally refers to data or properties that need to be tracking application.
+        ```javascript
+            const [data, changeData] = useState()
+            // data is the initial state of the data
+            // changeData is the function according to which the data will change
+            // under the useState() method, we can give the initial value as args
+        ```
+        because if you log this useState() method, it returns an array with two elements, first the initial data and a function according to which the data is changed
