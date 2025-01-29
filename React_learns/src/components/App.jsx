@@ -15,16 +15,18 @@ import Person from "./Person.jsx";
 import Product from "./Product.jsx";
 import Weather from './Weather.jsx'
 import UserStatus from './UserStatus.jsx'
+import StyleCard from "./StyleCard.jsx";
 
 const App = () => {
   return (
     <>
       {/* <Person name="Anand" age={20} /> */}
       {/* <Product name="Laptop" price="$1299" /> */}
-      <Props />
+      {/* <Props />
       <Weather temp={200} />
       <UserStatus loggedIn={false} isAdmin={false}/>
-      <Greeting timeOfDay={"morning"}/>
+      <Greeting timeOfDay={"morning"}/> */}
+      <StyleCard />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container

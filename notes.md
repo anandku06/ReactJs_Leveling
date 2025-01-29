@@ -103,3 +103,13 @@
 ## Conditional Rendering
 - allows us to dynamically display different UI components or content-based on specific conditions
 - This enables us to create more interactive and responsive user experiences
+
+## Styling
+- Inline styling : with the style attribute and the values should be enclosed within two curly braces because in React the values are given inside curly braces
+    Or can define an object for styling and pass it as attribute to the tag and the properties name are different from the CSS
+- for external styling : make an .css file and just import it into the required .jsx file
+
+## React-Icons
+- a React library having different types of icons for use
+    requires npm to install its package and can be used then
+- after installing, just search for the desired icons and import it and use its pre-defined component in your project
