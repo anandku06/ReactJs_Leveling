@@ -18,6 +18,7 @@ import UserStatus from './UserStatus.jsx'
 import StyleCard from "./StyleCard.jsx";
 import ProfileCard from "./ProfileCard.jsx";
 import IconComponent from "./IconComponent.jsx";
+import States from "./States.jsx";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
       <StyleCard />
       <ProfileCard />
       <IconComponent />
+      <States />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container

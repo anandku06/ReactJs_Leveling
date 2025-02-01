@@ -114,6 +114,10 @@
     requires npm to install its package and can be used then
 - after installing, just search for the desired icons and import it and use its pre-defined component in your project
 
+## Handling Events in React
+- using the pre-defined events in react, we can handle any event, without using that '.addEventListener()' method
+- examples: onClick={}, onCopy={}, etc. , that also takes the callbackfn and invokes when event is triggerred
+
 ## State
 - a way to store and manage data that can change over time and affects how the component renders.
 - define state using the *useState Hook*, which allows you to set an initial value and provides a way to update that state
@@ -122,6 +126,7 @@
 - a new addition in React 16.8, let you use state and other React feats without writing a class.
     - ### useState() :
         allows us to track state in a functional component. State generally refers to data or properties that need to be tracking application.
+        destructuring the two array elements and then using to manage states of the elements
         ```javascript
             const [data, changeData] = useState()
             // data is the initial state of the data
