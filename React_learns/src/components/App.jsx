@@ -19,6 +19,7 @@ import StyleCard from "./StyleCard.jsx";
 import ProfileCard from "./ProfileCard.jsx";
 import IconComponent from "./IconComponent.jsx";
 import States from "./States.jsx";
+import SharingStates from "./SharingStates.jsx";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
       <ProfileCard />
       <IconComponent /> */}
       <States />
+      <SharingStates />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
