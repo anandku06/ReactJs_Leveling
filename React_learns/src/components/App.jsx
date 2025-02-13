@@ -29,9 +29,9 @@ const App = () => {
       <Weather temp={200} />
       <UserStatus loggedIn={false} isAdmin={false}/>
       <Greeting timeOfDay={"morning"}/> */}
-      <StyleCard />
+      {/* <StyleCard />
       <ProfileCard />
-      <IconComponent />
+      <IconComponent /> */}
       <States />
     </>
   );
