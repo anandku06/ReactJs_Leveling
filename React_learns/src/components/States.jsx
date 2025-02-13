@@ -31,6 +31,17 @@ const States = () => {
     setMovie({...movie, ratings : 9.8}) // doing all those things here 
   }
 
+  const [movies, setMovies] = useState([
+    {id : 1, title: "SpiderMan", ratings : 8.7},
+    {id : 2, title: "SuperMan", ratings : 8.9},
+    {id : 3, title: "IronMan", ratings : 9.0},
+  ]) // made an array of objects for state changing practice
+
+  const changeName = () => {
+    setMovies(movies.map(m => m.id === 1 ? {...movies, title : "John Wick 4"} : m))
+  }
+  // checks the object with id 1 and changes the title of that object after mapping over the array
+
   return (
     <section>
       <div>
@@ -51,6 +62,14 @@ const States = () => {
       <h3>Ratings: {movie.ratings}</h3>
 
       <button onClick={changeRating}>Change rating!!</button>
+      <br />
+
+      <h1>Movies</h1>
+      {movies.map(m => (
+        <li key={m.id}>{m.title}</li>
+      ))}
+
+      <button onClick={changeName}>Change Name</button>
     </section>
   );
 };
