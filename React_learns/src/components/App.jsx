@@ -22,6 +22,7 @@ import States from "./States.jsx";
 import SharingStates from "./SharingStates.jsx";
 import InitialState from "./InitialState.jsx";
 import Counter from "./Counter.jsx";
+import ToDoList from "./ToDoList.jsx";
 
 const App = () => {
   return (
@@ -39,6 +40,7 @@ const App = () => {
       {/* <SharingStates /> */}
       {/* <InitialState /> */}
       <Counter />
+      <ToDoList />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
