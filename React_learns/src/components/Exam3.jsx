@@ -12,7 +12,7 @@ const Exam3 = () => {
   useEffect(() => {
     localStorage.setItem("name", JSON.stringify(name)) 
   }, [name])
-  // whenever the input field renders, the value is set to localStorage
+  // whenever the input field changes, the value is set to localStorage
   // setting the naem value in the localStorage as it stores only string so using stringify()
 
   const handleChange = (e) => {
