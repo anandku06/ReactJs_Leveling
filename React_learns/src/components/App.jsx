@@ -13,8 +13,8 @@ import ProductList from "./ProductList.jsx";
 import Props from "./Props.jsx";
 import Person from "./Person.jsx";
 import Product from "./Product.jsx";
-import Weather from './Weather.jsx'
-import UserStatus from './UserStatus.jsx'
+import Weather from "./Weather.jsx";
+import UserStatus from "./UserStatus.jsx";
 import StyleCard from "./StyleCard.jsx";
 import ProfileCard from "./ProfileCard.jsx";
 import IconComponent from "./IconComponent.jsx";
@@ -23,6 +23,7 @@ import SharingStates from "./SharingStates.jsx";
 import InitialState from "./InitialState.jsx";
 import Counter from "./Counter.jsx";
 import ToDoList from "./ToDoList.jsx";
+import Profile from "./Profile.jsx";
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
       {/* <InitialState /> */}
       <Counter />
       <ToDoList />
+      <Profile />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
