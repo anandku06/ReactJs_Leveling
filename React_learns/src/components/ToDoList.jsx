@@ -9,7 +9,6 @@ const ToDoList = () => {
 
     if (inValue.trim()) {
       setTasks([...tasks, inValue.trim()]);
-      localStorage.setItem("todo", JSON.stringify(inValue.trim()));
       setInValue("");
     }
   };
