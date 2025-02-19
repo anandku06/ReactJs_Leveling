@@ -9,6 +9,7 @@ const ToDoList = () => {
 
     if (inValue.trim()) {
       setTasks([...tasks, inValue.trim()]);
+      localStorage.setItem("todo", JSON.stringify(inValue.trim()));
       setInValue("");
     }
   };
@@ -25,6 +26,7 @@ const ToDoList = () => {
         />
 
         <button type="submit">Create</button>
+        <button onClick={() => setTasks([])}>Clear</button>
       </form>
       <div>
         <ul>
