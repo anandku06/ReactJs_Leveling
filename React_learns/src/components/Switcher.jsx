@@ -7,7 +7,7 @@ const Switcher = () => {
       {sw ? <span>Dark</span> : <span>Light</span>}
       <br />
 
-      <input type="text" key={sw ? "dark" : "light"} />
+      <input type="text" key={sw ? "dark" : "light"} placeholder={sw ? "dark" : "light"} />
 
       <button onClick={() => setSw((s) => !s)}>Switch</button>
     </div>

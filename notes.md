@@ -165,3 +165,21 @@ const Component = () => {
 - a feature that allows you to render a child component into a DOM node that exists outside the hierarchy of the parent component
 - can be useful for scenarios like modals, tooltips or dropdowns, where you want to break out of the usual parent-child structure and render in a different part of the DOM
 - using a module createPortal from react-dom package, takes two params, one is the component/content to be rendered, and second where to render(may be a div or in a component)
+
+## useEffect()
+
+- allows you to perform _side effects_ in your components.
+- some examples of side effects are: fetching data, directly updating the DOM, etc.
+- syntax:
+
+```javascript
+// takes two parameters: one is the callbackfn that is triggered
+// and second is the dependency array
+useEffect(() => {
+  // do your magic
+});
+// here without the array -> effect on every single render
+```
+- conditions are declared inside of useEffect() not outside of it.
+- if the array is empty then, the effect is on the initial render only(first time renders only then effect is fired)
+- if the state is given in the array, then whenever the state changes the effect is fired
