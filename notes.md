@@ -158,9 +158,10 @@ const Component = () => {
     // under the useState() method, we can give the initial value as args
     ```
     - because if you log this useState() method, it returns an array with two elements, first the initial data and a function according to which the data is changed
-    - Computed Property Values, setting the object's properties/keys dynamically, when we don't know what should be the property of this object
+    - _Computed Property Values_, setting the object's properties/keys dynamically, when we don't know what should be the property of this object
 
 ## Portal
+
 - a feature that allows you to render a child component into a DOM node that exists outside the hierarchy of the parent component
 - can be useful for scenarios like modals, tooltips or dropdowns, where you want to break out of the usual parent-child structure and render in a different part of the DOM
 - using a module createPortal from react-dom package, takes two params, one is the component/content to be rendered, and second where to render(may be a div or in a component)

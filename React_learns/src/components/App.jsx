@@ -25,6 +25,7 @@ import Counter from "./Counter.jsx";
 import ToDoList from "./ToDoList.jsx";
 import Profile from "./Profile.jsx";
 import ShoppingList from "./ShoppingList.jsx";
+import CopyInput from "./CopyInput.jsx";
 
 const App = () => {
   return (
@@ -41,10 +42,11 @@ const App = () => {
       {/* <States /> */}
       {/* <SharingStates /> */}
       {/* <InitialState /> */}
-      <Counter />
-      <ToDoList />
-      <Profile />
-      <ShoppingList />
+      {/* <Counter /> */}
+      {/* <ToDoList /> */}
+      {/* <Profile /> */}
+      {/* <ShoppingList /> */}
+      <CopyInput />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
