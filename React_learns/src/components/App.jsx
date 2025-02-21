@@ -26,6 +26,7 @@ import ToDoList from "./ToDoList.jsx";
 import Profile from "./Profile.jsx";
 import ShoppingList from "./ShoppingList.jsx";
 import CopyInput from "./CopyInput.jsx";
+import Switcher from "./Switcher.jsx";
 
 const App = () => {
   return (
@@ -47,6 +48,7 @@ const App = () => {
       {/* <Profile /> */}
       {/* <ShoppingList /> */}
       <CopyInput />
+      <Switcher />
     </>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
