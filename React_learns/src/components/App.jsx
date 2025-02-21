@@ -27,10 +27,21 @@ import Profile from "./Profile.jsx";
 import ShoppingList from "./ShoppingList.jsx";
 import CopyInput from "./CopyInput.jsx";
 import Switcher from "./Switcher.jsx";
+import { useEffect, useState } from "react";
 
 const App = () => {
+  const [value, setValue] = useState(0);
+
+  // using the useEffect hook, takes two params, one is the callbackfn and second is the dependency array
+  useEffect(() => {
+    console.log("call useEffect");
+    document.title = `Increment ${value}`;
+  }, [value]);
+  // here dependency array is not given so this effect is fired at every render
+  // when the array is empty, the effect is fired only the first time
+  // now the state is given in the array, whenever the state changes, the effect is fired
   return (
-    <>
+    <div>
       {/* <Person name="Anand" age={20} /> */}
       {/* <Product name="Laptop" price="$1299" /> */}
       {/* <Props />
@@ -47,9 +58,11 @@ const App = () => {
       {/* <ToDoList /> */}
       {/* <Profile /> */}
       {/* <ShoppingList /> */}
-      <CopyInput />
-      <Switcher />
-    </>
+      {/* <CopyInput /> */}
+      {/* <Switcher /> */}
+      <h2>{value}</h2>
+      <button onClick={() => setValue(value + 1)}>Click me</button>
+    </div>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
 

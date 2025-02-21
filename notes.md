@@ -183,3 +183,7 @@ useEffect(() => {
 - conditions are declared inside of useEffect() not outside of it.
 - if the array is empty then, the effect is on the initial render only(first time renders only then effect is fired)
 - if the state is given in the array, then whenever the state changes the effect is fired
+- we setup useEffect hook to run some code WHEN:
+  - component renders for the first time
+  - whenever it re-renders
+  - some data in our component changed
