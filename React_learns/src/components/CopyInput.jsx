@@ -25,7 +25,7 @@ const CopyInput = () => {
 
       <PopContent copied={copied} />
     </div>
-  );
+  ); // here rendered another component
 };
 
 export default CopyInput;
