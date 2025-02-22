@@ -28,9 +28,9 @@ import ShoppingList from "./ShoppingList.jsx";
 import CopyInput from "./CopyInput.jsx";
 import Switcher from "./Switcher.jsx";
 import { useEffect, useState } from "react";
-import Data from "./Data.jsx";
 import BasicEffect from "./BasicEffect.jsx";
 import CounterEffect from "./CounterEffect.jsx";
+import FetchDataEffect from "./FetchDataEffect.jsx";
 
 const App = () => {
   const [value, setValue] = useState(0);
@@ -65,9 +65,9 @@ const App = () => {
       {/* <Switcher /> */}
       {/* <h2>{value}</h2>CounterEffect
       <button onClick={() => setValue(value + 1)}>Click me</button> */}
-      {/* <Data /> */}
       <BasicEffect />
       <CounterEffect />
+      <FetchDataEffect />
     </div>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
