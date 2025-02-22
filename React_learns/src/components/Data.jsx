@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const FetchDataEffect = () => {
+const Data = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ const FetchDataEffect = () => {
       );
       // console.log(response);
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
 
       if (data && data.length) setData(data);
     }
@@ -21,12 +21,18 @@ const FetchDataEffect = () => {
 
   return (
     <div>
-      <h1>First Post Title</h1>
-      {data.length > 0 ? <h2>{data[0].title}</h2> : <h2>Loading...</h2>}
-      <h2>{data[0]?.title || "Loading..."}</h2> {/* Or using optional chaining, so that if data is loaded then show the title or use Loading... instead of that */}
-      {/* <h2>{data[0].title}</h2> this will cause error bcz when accessing, the data is initially empty, so it won't be able to access that the first element */}
+      <ul>
+        {/* here this is not throwing any error bcz the map function doesn't work on empty array;
+        and at first map just skips its execution bcz of empty array so it doesn't throw any error */}
+        {data.map((post) => (
+          <div key={post.id}>
+            <li>Title: {post.title}</li>
+            <li>Body: {post.body}</li>
+          </div>
+        ))}
+      </ul>
     </div>
   );
 };
 
-export default FetchDataEffect;
+export default Data;
