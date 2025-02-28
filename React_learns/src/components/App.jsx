@@ -33,7 +33,9 @@ import CounterEffect from "./CounterEffect.jsx";
 import FetchDataEffect from "./FetchDataEffect.jsx";
 
 const App = () => {
-  const [value, setValue] = useState(0);
+  // const [value, setValue] = useState(0);
+  // Defined a name
+  const name = "Anand";
 
   // using the useEffect hook, takes two params, one is the callbackfn and second is the dependency array
   // useEffect(() => {
@@ -68,6 +70,8 @@ const App = () => {
       <BasicEffect />
       <CounterEffect />
       <FetchDataEffect />
+      {/* drilling this prop to this component */}
+      <CA name={name} />
     </div>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container

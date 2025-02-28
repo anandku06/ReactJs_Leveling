@@ -187,3 +187,16 @@ useEffect(() => {
   - component renders for the first time
   - whenever it re-renders
   - some data in our component changed
+
+## Props Drilling
+- happens when you have to pass any data through every intermediate component in the chain
+- the middle components just pass the data without using them
+  ### It's a Problem:
+  - Intermediate components have to deal with the props they don't need
+  - If rearrangement of the components tree happens, then the props flow has to be revised 
+  - harder to track where data is coming from and where it's actually used
+
+  ### Solutions:
+  - Context API
+  - State Management Libraries
+  - Component Composition
