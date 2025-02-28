@@ -180,6 +180,7 @@ useEffect(() => {
 });
 // here without the array -> effect on every single render
 ```
+
 - conditions are declared inside of useEffect() not outside of it.
 - if the array is empty then, the effect is on the initial render only(first time renders only then effect is fired)
 - if the state is given in the array, then whenever the state changes the effect is fired
@@ -189,14 +190,62 @@ useEffect(() => {
   - some data in our component changed
 
 ## Props Drilling
+
 - happens when you have to pass any data through every intermediate component in the chain
 - the middle components just pass the data without using them
+
   ### It's a Problem:
+
   - Intermediate components have to deal with the props they don't need
-  - If rearrangement of the components tree happens, then the props flow has to be revised 
+  - If rearrangement of the components tree happens, then the props flow has to be revised
   - harder to track where data is coming from and where it's actually used
 
   ### Solutions:
+
   - Context API
   - State Management Libraries
   - Component Composition
+
+## Context API
+
+- a feature that allows you to manage and share data across your component tree without having to pass props down manually at every level
+- useful for scenarios where you need to share data or functions across many components, expecially when these components are deeply nested
+- import the createContext function from the react package and after instantiating the function you can pass the data using the Provider property , passing it as prop to its component
+- to access you have to use the Consumer property which takes an callbackfn
+
+```javascript
+import { createContext } from "react";
+
+export const Data = createContext(); // instantiating the imported function createContext and exporting it as well for further use
+
+const App = () => {
+  const name = "Anand"; // this is the data to be shared
+
+  // wrapping the component inside the Data component
+  // using the property of this context Provider to send the data and value attribute for the data to be sent
+  return (
+    <div>
+      <Data.Provider value={name}>
+        <ComponentA />
+      </Data.Provider>
+    </div>
+  );
+};
+
+// in the ComponentA.jsx file
+
+import { Data } from "./App.jsx";
+
+const ComponentA = () => {
+  // inside the ComponentA file using the createContext's Consumer property we can consume or use the passed data by the Provider
+  // Consumer takes a callbackfn so specified accordingly
+  return(
+    <Data.Consumer>
+      { (name) => {
+        return <h1>{name}</h1>
+      }}
+    </Data.Consumer>
+  )
+}
+```
+- every data has its own context instance and component
