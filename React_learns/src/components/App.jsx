@@ -31,6 +31,10 @@ import { useEffect, useState } from "react";
 import BasicEffect from "./BasicEffect.jsx";
 import CounterEffect from "./CounterEffect.jsx";
 import FetchDataEffect from "./FetchDataEffect.jsx";
+import { createContext } from "react";
+import CA from "./CA.jsx";
+
+export const Data = createContext();
 
 const App = () => {
   // const [value, setValue] = useState(0);
@@ -71,7 +75,11 @@ const App = () => {
       <CounterEffect />
       <FetchDataEffect />
       {/* drilling this prop to this component */}
-      <CA name={name} />
+      {/* <CA name={name} /> */}
+      {/* using the ContextAPI for prop sharing */}
+      <Data.Provider value={name}>
+        <CA />
+      </Data.Provider>
     </div>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container

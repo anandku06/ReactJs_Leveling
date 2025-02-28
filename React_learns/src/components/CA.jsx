@@ -1,12 +1,13 @@
-import React from 'react'
+import React from "react";
+import CB from "./CB";
 
-const CA = ({name}) => {
-    // again drilling this component to the CB component
+const CA = () => {
+  // again drilling this component to the CB component
   return (
     <div>
-        <CB name={name} />
+      <CB />
     </div>
-  )
-}
+  );
+};
 
-export default CA
+export default CA;
