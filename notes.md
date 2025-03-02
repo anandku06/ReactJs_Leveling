@@ -194,17 +194,50 @@ useEffect(() => {
 - happens when you have to pass any data through every intermediate component in the chain
 - the middle components just pass the data without using them
 
-  ### It's a Problem:
+```javascript
+//from App component the data goes to ComponentA
+const App = () => {
+  const data = "Anand";
+  return (
+    <div>
+      <ComponentA data={data} />
+    </div>
+  );
+};
 
-  - Intermediate components have to deal with the props they don't need
-  - If rearrangement of the components tree happens, then the props flow has to be revised
-  - harder to track where data is coming from and where it's actually used
+//ComponentA.jsx file
+// via ComponentA
+const ComponentA = ({ data }) => {
+  return (
+    <div>
+      <ComponentB data={data} />
+    </div>
+  );
+};
+// ComponentB.jsx file
+// to ComponentB, prop data is drilled
+const ComponentB = ({ data }) => {
+  return (
+    <div>
+      <h1> {data} </h1>
+    </div>
+  );
+};
 
-  ### Solutions:
+export default ComponentB;
+```
 
-  - Context API
-  - State Management Libraries
-  - Component Composition
+### It's a Problem:
+
+- Intermediate components have to deal with the props they don't need
+- If rearrangement of the components tree happens, then the props flow has to be revised
+- harder to track where data is coming from and where it's actually used
+
+### Solutions:
+
+- Context API
+- State Management Libraries
+- Component Composition
 
 ## Context API
 
@@ -239,13 +272,52 @@ import { Data } from "./App.jsx";
 const ComponentA = () => {
   // inside the ComponentA file using the createContext's Consumer property we can consume or use the passed data by the Provider
   // Consumer takes a callbackfn so specified accordingly
-  return(
+  return (
     <Data.Consumer>
-      { (name) => {
-        return <h1>{name}</h1>
+      {(name) => {
+        return <h1>{name}</h1>;
       }}
     </Data.Consumer>
-  )
-}
+  );
+};
 ```
-- every data has its own context instance and component
+
+- every data has its own context instance and component i.e. if any other data is there then a new instance is created as well
+
+## useContext()
+
+- allows us to access the context values provided by a Context object directly within a functional component
+- Context provides a way to pass data through the component tree without having to pass drops down manually at every level
+
+```javascript
+import { createContext, useContext } from "react";
+
+export const Data = createContext();
+
+const App = () => {
+  const userName = "Anand";
+  return (
+    <Data.Provider value={userName}>
+      <ComponentA />
+    </Data.Provider>
+  );
+};
+
+// ComponentA.jsx
+
+const ComponentA = () => {
+  return <ComponentB />;
+};
+
+export default ComponentA;
+
+// ComponentB.jsx
+import { useContext } from "react";
+import { Data } from "./App.jsx";
+
+const ComponentB = () => {
+  const name = useContext(Data); // in place of using the Data.Consumer, we using useContext() hook and passing the instance of the createContext()
+
+  return <h1>{name}</h1>;
+};
+```
