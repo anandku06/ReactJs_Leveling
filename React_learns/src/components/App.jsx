@@ -33,6 +33,8 @@ import CounterEffect from "./CounterEffect.jsx";
 import FetchDataEffect from "./FetchDataEffect.jsx";
 import { createContext } from "react";
 import CA from "./CA.jsx";
+import UserProfile from "./UserProfile.jsx";
+import UserProvider from "./UserContext.jsx";
 
 export const Data = createContext();
 
@@ -71,15 +73,18 @@ const App = () => {
       {/* <Switcher /> */}
       {/* <h2>{value}</h2>CounterEffect
       <button onClick={() => setValue(value + 1)}>Click me</button> */}
-      <BasicEffect />
+      {/* <BasicEffect />
       <CounterEffect />
-      <FetchDataEffect />
+      <FetchDataEffect /> */}
       {/* drilling this prop to this component */}
       {/* <CA name={name} /> */}
       {/* using the ContextAPI for prop sharing */}
-      <Data.Provider value={name}>
+      {/* <Data.Provider value={name}>
         <CA />
-      </Data.Provider>
+      </Data.Provider> */}
+      <UserProvider>
+        <UserProfile />
+      </UserProvider>
     </div>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container

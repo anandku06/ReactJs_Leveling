@@ -256,6 +256,7 @@ const App = () => {
 
   // wrapping the component inside the Data component
   // using the property of this context Provider to send the data and value attribute for the data to be sent
+  // any component enclosed inside 
   return (
     <div>
       <Data.Provider value={name}>
