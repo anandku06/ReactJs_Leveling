@@ -35,6 +35,7 @@ import { createContext } from "react";
 import CA from "./CA.jsx";
 import UserProfile from "./UserProfile.jsx";
 import UserProvider from "./UserContext.jsx";
+import UpdateUser from "./UpdateUser.jsx";
 
 export const Data = createContext();
 
@@ -82,8 +83,10 @@ const App = () => {
       {/* <Data.Provider value={name}>
         <CA />
       </Data.Provider> */}
+      {/* inside the UserProvider component all the child comps have access to the shared Context data */}
       <UserProvider>
         <UserProfile />
+        <UpdateUser />
       </UserProvider>
     </div>
   );
