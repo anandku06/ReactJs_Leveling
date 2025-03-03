@@ -27,7 +27,7 @@ import Profile from "./Profile.jsx";
 import ShoppingList from "./ShoppingList.jsx";
 import CopyInput from "./CopyInput.jsx";
 import Switcher from "./Switcher.jsx";
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import BasicEffect from "./BasicEffect.jsx";
 import CounterEffect from "./CounterEffect.jsx";
 import FetchDataEffect from "./FetchDataEffect.jsx";
@@ -43,6 +43,25 @@ const App = () => {
   // const [value, setValue] = useState(0);
   // Defined a name
   const name = "Anand";
+  // useReducer()
+  const initialState = { count: 0 }; // the starting value of the state
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case "increment":
+        return { ...state, count: state.count + 1 };
+
+      case "decrement":
+        return { ...state, count: state.count - 1 };
+
+      case "reset":
+        return { ...state, count: 0 };
+
+      default:
+        return state;
+    }
+  };
+
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   // using the useEffect hook, takes two params, one is the callbackfn and second is the dependency array
   // useEffect(() => {
@@ -88,6 +107,17 @@ const App = () => {
         <UserProfile />
         <UpdateUser />
       </UserProvider>
+      <div>
+        <h1>{state.count}</h1>
+        {/* here dispatch has the reference of state internally so no need to provide it here again */}
+        <button onClick={() => dispatch({ type: "increment" })}>
+          Increment
+        </button>
+        <button onClick={() => dispatch({ type: "decrement" })}>
+          Decrement
+        </button>
+        <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
+      </div>
     </div>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container

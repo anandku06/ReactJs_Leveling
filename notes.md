@@ -101,8 +101,8 @@ const Component = () => {
 - make a JS function and returning HTML code through it
 - returns only single parent element, whether a div or any block-type element
 - closing of the HTML tags are also important
-- to provide classes to the tags, we'll use className attrbute, not the class attribute as it'll considered as real class by the JS interpreter
-  - same goes for the for attribute of the label tag, htmlFor attribute is used at its place
+- to provide classes to the tags, we'll use className attrbute, not the class attribute as it'll considered as real *class*(keyword) by the JS interpreter
+  - same goes for the *for* attribute of the label tag, *htmlFor* attribute is used at its place
   ### JSX Expressions
   - With JSX, you can write expressions inside curly braces.
   - The expressions can be a React variable, or property, or any other JS expression.
@@ -321,4 +321,16 @@ const ComponentB = () => {
 
   return <h1>{name}</h1>;
 };
+```
+
+## useReducer()
+- a hook that is similar to useState, but its designed for more complex state objects or state transitions that involves multiple sub-values
+- allows you to manage state in a functional, immutable way
+```javascript
+  // Syntax
+  const [state, dispatch] = useReducer(reducer, initialState)
+  // state -> current state value, which can be used in the components
+  // dispatch -> function called to send actions to the reducer, which then updates the state
+  // reducer -> a function that describes that how the state should change based on action ; takes the current state and an action as inputs and returns a new state
+  // initialState -> starting value for the state when the component first renders
 ```
