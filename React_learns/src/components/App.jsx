@@ -36,6 +36,7 @@ import CA from "./CA.jsx";
 import UserProfile from "./UserProfile.jsx";
 import UserProvider from "./UserContext.jsx";
 import UpdateUser from "./UpdateUser.jsx";
+import RedCounter from "./RedCounter.jsx";
 
 export const Data = createContext();
 
@@ -107,17 +108,8 @@ const App = () => {
         <UserProfile />
         <UpdateUser />
       </UserProvider>
-      <div>
-        <h1>{state.count}</h1>
-        {/* here dispatch has the reference of state internally so no need to provide it here again */}
-        <button onClick={() => dispatch({ type: "increment" })}>
-          Increment
-        </button>
-        <button onClick={() => dispatch({ type: "decrement" })}>
-          Decrement
-        </button>
-        <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
-      </div>
+      <h1>useReducer() Hook Counter</h1>
+      <RedCounter />
     </div>
   );
 }; // first letter of the function should be capitalise and should always return a HTML container
